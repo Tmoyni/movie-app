@@ -6,6 +6,8 @@
       <router-link to="/contact">Contact</router-link>
     </div>
     <router-view/>
+    <div>  {{ info }}
+</div>
   </div>
 </template>
 
