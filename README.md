@@ -1,5 +1,9 @@
 # movie-app
 
+- Vue.js
+- Axios for fetching data
+- OMDB API for movie data
+
 ## Project setup
 ```
 npm install
