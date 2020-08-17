@@ -12,7 +12,7 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app">
-      <h1>Bitcoin Price Index</h1>
+      <h1>OMDB</h1>
 
   <section v-if="errored">
     <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
@@ -21,15 +21,11 @@
   <section v-else>
     <div v-if="loading">Loading...</div>
 
-    <div
-      v-else
-      v-for="currency in info"
-      class="currency"
-    >
-      {{ currency.description }}:
-      <span class="lighten">
-        <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
-      </span>
+    <div v-else>
+      <img :src="info.Poster" :alt="info.Title">
+      
+      <h1>{{ info.Title }}</h1>
+      <h3>{{ info.Actors }}</h3>
     </div>
 
   </section>
