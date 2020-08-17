@@ -15,7 +15,9 @@ Vue.config.productionTip = false
 // }).$mount('#app')
 
 new Vue({
-  el: '#app',
+  router,
+  store,
+  render: h => h(App),
   data () {
     return {
       info: null,
@@ -23,16 +25,12 @@ new Vue({
       errored: false
     }
   },
-  filters: {
-    currencydecimal (value) {
-      return value.toFixed(2)
-    }
-  },
   mounted () {
     axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .get('http://www.omdbapi.com/?i=tt3896198&apikey=475aaa3c')
       .then(response => {
-        this.info = response.data.bpi
+        console.log(response.data)
+        this.info = response.data
       })
       .catch(error => {
         console.log(error)
@@ -40,4 +38,6 @@ new Vue({
       })
       .finally(() => this.loading = false)
   }
-})
+}).$mount('#app')
+
+// 475aaa3c
