@@ -1,7 +1,11 @@
 <template>
   <div class="home">
-    <MovieOne msg="Cast Compare"/>
-    <MovieOne msg="Cast Compare"/>
+    <h1>Cast Compare</h1>
+    <div class="movies">
+      <MovieOne msg="Cast Compare"/>
+      <MovieOne msg="Cast Compare"/>
+    </div>
+
   </div>
 </template>
 
@@ -16,3 +20,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.movies {
+  display: flex;
+  justify-content: center;
+}
+</style>
