@@ -2,7 +2,7 @@
 
 - Vue.js
 - Axios for fetching data
-- OMDB API for movie data
+- The Movie Database (TMDb)
 
 ## Project setup
 ```
